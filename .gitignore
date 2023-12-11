@@ -1,0 +1,41 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+generated
+tmp
+/out-tsc
+
+# dependencies
+node_modules
+node_modules_unlinked
+workspace.tar*
+
+# IDE
+.vscode/
+.idea/
+.project
+.classpath
+*.launch
+*.sublime-workspace
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# misc
+npm-debug.log
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# NX
+.nx/cache
+
+# Next.js
+.next
