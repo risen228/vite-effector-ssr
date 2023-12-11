@@ -4,15 +4,15 @@
   "version": "0.0.0-app",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development node server.js",
-    "build": "yarn build:client && yarn build:server && cp server.js dist",
+    "dev": "NODE_ENV=development node server-dev.js",
+    "build": "yarn build:client && yarn build:server && cp server-prod.js dist",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "preview": "NODE_ENV=production node server"
+    "start": "NODE_ENV=production node dist/server-prod.js"
   },
   "dependencies": {
-    "atomic-router": "^0.9.1",
-    "atomic-router-react": "^0.9.0",
+    "atomic-router": "^0.9.3",
+    "atomic-router-react": "^0.9.1",
     "effector": "^23.0.0",
     "effector-react": "^23.0.1",
     "express": "^4.18.2",
@@ -29,6 +29,7 @@
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.0",
+    "dotenv": "^16.3.1",
     "eslint": "^8.53.0",
     "eslint-kit": "^10.0.0",
     "prettier": "^3.1.0",
